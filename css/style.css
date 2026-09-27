@@ -139,6 +139,10 @@ h3 { font-size: 1.1rem; margin: 1.5em 0 0.4em; font-style: italic; }
   line-height: 1.5;
 }
 
+.profile-text > p:first-child { margin-top: 0; }
+.profile + h2 { margin-top: 0.6em; }
+.profile-text > p:last-child { margin-bottom: 0.8em; }
+
 .facts {
   display: grid;
   grid-template-columns: 9.5em 1fr;
