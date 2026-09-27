@@ -83,12 +83,9 @@ a:hover { text-decoration-thickness: 2px; }
   border-bottom-color: var(--accent);
 }
 
-.site-header { text-align: center; }
-.site-nav ul { justify-content: center; }
-
 .header-row {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   gap: 24px;
 }
