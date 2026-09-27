@@ -83,11 +83,14 @@ a:hover { text-decoration-thickness: 2px; }
   border-bottom-color: var(--accent);
 }
 
+.site-header { text-align: center; }
+.site-nav ul { justify-content: center; }
+
 .header-row {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 24px;
 }
 .header-text { min-width: 0; }
 .header-photo {
