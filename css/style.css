@@ -218,6 +218,19 @@ ul.people .work { display: block; font-style: italic; margin-top: 0.15em; }
 .theme p { margin: 0.3em 0; }
 .theme .example { font-size: 0.9rem; color: var(--muted); }
 
+.flags { display: inline-flex; gap: 8px; margin-left: 10px; vertical-align: middle; }
+.flag { height: 18px; width: auto; border: 1px solid var(--rule); }
+.icon-book { height: 26px; width: auto; }
+
+.photo-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 0.8em 0 0.4em; }
+.photo-pair img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 4px; }
+.photo-figure { margin: 0.8em auto 0.4em; max-width: 480px; }
+.photo-figure .photo-pair { margin: 0; }
+.photo-figure figcaption { font-family: var(--sans); font-size: 0.8rem; color: var(--muted); margin-top: 0.4em; text-align: center; }
+.photo-side { float: right; width: 170px; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 4px; margin: 0.4em 0 0.8em 1.2em; }
+.photo-side.photo-small { width: 130px; }
+h2.clear, .site-footer { clear: both; }
+
 /* ---------- Placeholders (to be replaced by Robin) ---------- */
 
 .placeholder {
@@ -261,4 +274,6 @@ ul.people .work { display: block; font-style: italic; margin-top: 0.15em; }
   .facts { grid-template-columns: 1fr; }
   .facts dt { padding-top: 0.6em; }
   .entries li { grid-template-columns: 1fr; }
+  .photo-side { width: 120px; margin-left: 0.8em; }
+  .photo-side.photo-small { width: 95px; }
 }
