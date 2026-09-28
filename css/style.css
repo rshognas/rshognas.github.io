@@ -110,6 +110,8 @@ h2 {
   border-bottom: 1px solid var(--rule);
 }
 h3 { font-size: 1.1rem; margin: 1.5em 0 0.4em; font-style: italic; }
+h3.upright { font-style: normal; }
+h2.tight { margin-top: 1.1em; }
 
 .lead { font-size: 1.1rem; }
 .muted { color: var(--muted); }
@@ -195,6 +197,14 @@ h3 { font-size: 1.1rem; margin: 1.5em 0 0.4em; font-style: italic; }
 
 .plain { padding-left: 1.2em; }
 .plain li { margin-bottom: 0.4em; }
+ul.plain { list-style: none; padding-left: 0; }
+ul.plain li { margin-bottom: 0.25em; }
+
+ul.people { list-style: none; padding-left: 0; margin: 0 0 1em; }
+ul.people li { margin-bottom: 1.1em; }
+ul.people .person { font-weight: 600; }
+ul.people .meta { font-family: var(--sans); font-size: 0.8rem; color: var(--muted); margin-left: 0.4em; }
+ul.people .work { display: block; font-style: italic; margin-top: 0.15em; }
 
 .note {
   font-size: 0.9rem;
