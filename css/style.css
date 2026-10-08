@@ -135,7 +135,7 @@ a:hover { text-decoration-thickness: 2px; }
     gap: 40px;
     padding: 0;
   }
-  .theme-strip span { flex-direction: column; gap: 8px; }
+  .theme-strip span { flex-direction: column; gap: 8px; text-align: center; }
   .theme-strip img { width: 72px; height: 72px; }
   .theme-strip span { font-size: 0.85rem; }
 }
