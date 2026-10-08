@@ -1,7 +1,7 @@
 /* Robin S. Högnäs — site styles (classic academic) */
 
 :root {
-  --bg: #fbfaf7;
+  --bg: #ffffff;
   --text: #1f1f1f;
   --muted: #5d5d5d;
   --accent: #1f3a5f;
@@ -45,10 +45,10 @@ a:hover { text-decoration-thickness: 2px; }
 }
 
 .site-name {
-  font-size: 1.9rem;
+  font-size: 2.2rem;
   font-weight: 500;
   letter-spacing: 0.02em;
-  margin: 0;
+  margin: 0 0 10px;
 }
 .site-name a { color: var(--text); text-decoration: none; }
 
@@ -92,11 +92,52 @@ a:hover { text-decoration-thickness: 2px; }
 .header-text { min-width: 0; }
 .header-photo {
   flex: none;
-  width: 87px;   /* the photo's native width — keeps it as sharp as possible */
+  width: 108px;
   height: auto;
   border: 1px solid var(--rule);
   padding: 3px;
   background: #fff;
+}
+
+.theme-strip {
+  margin-top: 14px;
+}
+.theme-strip .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 36px;
+  padding-block: 0;
+}
+.theme-strip span {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text);
+}
+.theme-strip img { width: 34px; height: 34px; }
+
+/* On wide screens, the icons float in the margin to the left of the text */
+@media (min-width: 1100px) {
+  .theme-strip {
+    position: fixed;
+    top: 240px;
+    left: calc(50% - 520px);
+    width: 110px;
+    margin: 0;
+  }
+  .theme-strip .wrap {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 0;
+  }
+  .theme-strip span { flex-direction: column; gap: 8px; }
+  .theme-strip img { width: 72px; height: 72px; }
+  .theme-strip span { font-size: 0.85rem; }
 }
 
 /* ---------- Typography ---------- */
@@ -199,6 +240,7 @@ h2.tight { margin-top: 1.1em; }
 .plain li { margin-bottom: 0.4em; }
 ul.plain { list-style: none; padding-left: 0; }
 ol.plain li { margin-bottom: 0.6em; }
+ul.plain.plans li { margin-bottom: 0.9em; line-height: 1.6; }
 ul.plain li { margin-bottom: 0.05em; line-height: 1.5; }
 
 ul.people { list-style: none; padding-left: 0; margin: 0 0 1em; }
@@ -228,6 +270,21 @@ ul.people .work { display: block; font-style: italic; margin-top: 0.15em; }
 .photo-figure { margin: 0.8em auto 0.4em; max-width: 480px; }
 .photo-figure .photo-pair { margin: 0; }
 .photo-figure figcaption { font-family: var(--sans); font-size: 0.8rem; color: var(--muted); margin-top: 0.4em; text-align: center; }
+.theme.has-photo {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 220px;
+  column-gap: 1.6em;
+  align-items: start;
+  margin: 1.4em 0;
+}
+.theme.has-photo h3 { margin-top: 0; font-style: normal; }
+.theme-text > :first-child { margin-top: 0; }
+.theme.has-photo.intro { margin-top: 0; }
+.photo-research { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: 4px; margin-top: 0.3em; }
+@media (max-width: 600px) {
+  .theme.has-photo { grid-template-columns: 1fr; }
+  .photo-research { order: -1; margin: 0 0 0.6em; }
+}
 .photo-side { float: right; width: 170px; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 4px; margin: 0.4em 0 0.8em 1.2em; }
 .photo-side.photo-small { width: 130px; }
 h2.clear, .site-footer { clear: both; }
