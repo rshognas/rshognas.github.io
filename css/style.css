@@ -120,8 +120,8 @@ a:hover { text-decoration-thickness: 2px; }
 }
 .theme-strip img { width: 34px; height: 34px; }
 
-/* On wide screens, the icons float in the margin to the left of the text */
-@media (min-width: 1100px) {
+/* On wider screens, the icons float in a column to the left of the text */
+@media (min-width: 900px) {
   .theme-strip {
     position: fixed;
     top: 240px;
@@ -134,12 +134,20 @@ a:hover { text-decoration-thickness: 2px; }
     align-items: center;
     gap: 40px;
     padding: 0;
+    margin: 0;
   }
-  .theme-strip span { flex-direction: column; gap: 8px; text-align: center; }
+  .theme-strip span { flex-direction: column; gap: 8px; text-align: center; font-size: 0.85rem; }
   .theme-strip img { width: 72px; height: 72px; }
-  .theme-strip span { font-size: 0.85rem; }
 }
-
+/* Medium windows: shift the page right to make room for the icon column */
+@media (min-width: 900px) and (max-width: 1099px) {
+  body:has(.theme-strip) .wrap { margin-left: 150px; margin-right: auto; }
+  body:has(.theme-strip) .theme-strip .wrap { margin: 0; }
+  .theme-strip { left: 20px; }
+  .theme-strip .wrap { gap: 32px; }
+  .theme-strip img { width: 60px; height: 60px; }
+  .theme-strip span { font-size: 0.78rem; }
+}
 /* ---------- Typography ---------- */
 
 h1, h2, h3 { font-weight: 500; line-height: 1.25; }
